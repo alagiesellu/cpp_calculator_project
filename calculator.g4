@@ -1,29 +1,138 @@
 grammar calculator;
 
-EQ : '=';
+equation
+   : expression relop expression
+   ;
 
-function : COS | SIN;
+expression
+   : multiplyingExpression ((PLUS | MINUS) multiplyingExpression)*
+   ;
 
-COS : 'cos';
+multiplyingExpression
+   : powExpression ((TIMES | DIV) powExpression)*
+   ;
 
-SIN : 'sin';
+powExpression
+   : signedAtom (POW signedAtom)*
+   ;
 
-BOPEN : '(';
+signedAtom
+   : PLUS signedAtom
+   | MINUS signedAtom
+   | func_
+   | atom
+   ;
 
-BCLOSE : ')';
+atom
+   : scientific
+   | variable
+   | parentices
+   ;
 
-PLUS : '+';
+variable
+   : VARIABLE
+   ;
 
-MINUS : '-';
+scientific
+   : SCIENTIFIC_NUMBER
+   ;
 
-TIMES : '*';
+parentices
+   : LPAREN expression RPAREN
+   ;
 
-DIV : '/';
+func_
+   : funcname parentices
+   ;
 
-VARIABLE : VALID_ID_START VALID_ID_CHAR*;
+funcname
+   : COS
+   | SIN
+   ;
+
+relop
+   : EQ
+   ;
 
 
-fragment VALID_ID_START : ('a' .. 'z') | ('A' .. 'Z') | '_';
+COS
+   : 'cos'
+   ;
 
 
-fragment VALID_ID_CHAR : VALID_ID_START | ('0' .. '9');
+SIN
+   : 'sin'
+   ;
+
+
+LPAREN
+   : '('
+   ;
+
+
+RPAREN
+   : ')'
+   ;
+
+
+PLUS
+   : '+'
+   ;
+
+
+MINUS
+   : '-'
+   ;
+
+
+TIMES
+   : '*'
+   ;
+
+
+DIV
+   : '/'
+   ;
+
+EQ
+   : '='
+   ;
+
+POW
+   : '^'
+   ;
+
+
+VARIABLE
+   : VALID_ID_CHAR+
+   ;
+
+
+fragment VALID_ID_CHAR
+   : ('a' .. 'z') | ('A' .. 'Z')
+   ;
+
+
+SCIENTIFIC_NUMBER
+   : NUMBER | HEXADECIMAL_NUMBER | BINARY_NUMBER
+   ;
+
+
+fragment NUMBER
+   : ('0' .. '9')+ ('.' ('0' .. '9') +)?
+   ;
+
+
+fragment HEXADECIMAL_NUMBER
+   : '0x' ('0' | '9' | 'A' | 'F') +
+   ;
+
+
+fragment BINARY_NUMBER
+   : ('0' | '1')+ 'b'
+   ;
+
+
+WS
+   : [ \r\n\t] + -> skip
+   ;
