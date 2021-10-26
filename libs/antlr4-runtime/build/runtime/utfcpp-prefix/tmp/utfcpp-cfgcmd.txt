@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DCMAKE_INSTALL_PREFIX=/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/thirdparty/utfcpp/install;-Dgtest_force_shared_crt=ON;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

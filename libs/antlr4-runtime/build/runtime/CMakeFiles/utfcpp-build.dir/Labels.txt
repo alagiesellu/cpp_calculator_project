@@ -1,0 +1,10 @@
+# Target labels
+ utfcpp
+# Source files and their labels
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/CMakeFiles/utfcpp-build
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/CMakeFiles/utfcpp-build.rule
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-build.rule
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-configure.rule
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-patch.rule
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-download.rule
+/home/leber/CLionProjects/cpp_calculator_project/libs/antlr4-runtime/build/runtime/utfcpp-prefix/src/utfcpp-stamp/utfcpp-mkdir.rule

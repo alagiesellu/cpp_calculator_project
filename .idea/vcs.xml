@@ -2,7 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/antlr4" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/libs/antlr4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/antlr4-cpp-runtime-4.9.2-source/runtime/thirdparty/utfcpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/antlr4-runtime/build/runtime/thirdparty/utfcpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/antlr4-runtime/build/runtime/thirdparty/utfcpp/extern/gtest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/antlr4-runtime/runtime/thirdparty/utfcpp" vcs="Git" />
   </component>
 </project>
