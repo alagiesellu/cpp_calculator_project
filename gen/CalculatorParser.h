@@ -1,5 +1,5 @@
 
-// Generated from /home/leber/CLionProjects/cpp_calculator_project/calculator.g4 by ANTLR 4.9.1
+// Generated from /home/leber/CLionProjects/cpp_calculator_project/Calculator.g4 by ANTLR 4.9.1
 
 #pragma once
 
@@ -9,7 +9,7 @@
 
 
 
-class  calculatorParser : public antlr4::Parser {
+class  CalculatorParser : public antlr4::Parser {
 public:
   enum {
     HEADER = 1, EQ = 2, COS = 3, SIN = 4, LPAREN = 5, RPAREN = 6, PLUS = 7, 
@@ -24,8 +24,8 @@ public:
     RuleFunc_ = 11, RuleFuncname = 12
   };
 
-  explicit calculatorParser(antlr4::TokenStream *input);
-  ~calculatorParser();
+  explicit CalculatorParser(antlr4::TokenStream *input);
+  ~CalculatorParser();
 
   virtual std::string getGrammarFileName() const override;
   virtual const antlr4::atn::ATN& getATN() const override { return _atn; };

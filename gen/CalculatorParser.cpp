@@ -1,79 +1,79 @@
 
-// Generated from /home/leber/CLionProjects/cpp_calculator_project/calculator.g4 by ANTLR 4.9.1
+// Generated from /home/leber/CLionProjects/cpp_calculator_project/Calculator.g4 by ANTLR 4.9.1
 
 
-#include "calculatorListener.h"
-#include "calculatorVisitor.h"
+#include "CalculatorListener.h"
+#include "CalculatorVisitor.h"
 
-#include "calculatorParser.h"
+#include "CalculatorParser.h"
 
 
 using namespace antlrcpp;
 using namespace antlr4;
 
-calculatorParser::calculatorParser(TokenStream *input) : Parser(input) {
+CalculatorParser::CalculatorParser(TokenStream *input) : Parser(input) {
   _interpreter = new atn::ParserATNSimulator(this, _atn, _decisionToDFA, _sharedContextCache);
 }
 
-calculatorParser::~calculatorParser() {
+CalculatorParser::~CalculatorParser() {
   delete _interpreter;
 }
 
-std::string calculatorParser::getGrammarFileName() const {
-  return "calculator.g4";
+std::string CalculatorParser::getGrammarFileName() const {
+  return "Calculator.g4";
 }
 
-const std::vector<std::string>& calculatorParser::getRuleNames() const {
+const std::vector<std::string>& CalculatorParser::getRuleNames() const {
   return _ruleNames;
 }
 
-dfa::Vocabulary& calculatorParser::getVocabulary() const {
+dfa::Vocabulary& CalculatorParser::getVocabulary() const {
   return _vocabulary;
 }
 
 
 //----------------- SessionContext ------------------------------------------------------------------
 
-calculatorParser::SessionContext::SessionContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::SessionContext::SessionContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-calculatorParser::HeaderContext* calculatorParser::SessionContext::header() {
-  return getRuleContext<calculatorParser::HeaderContext>(0);
+CalculatorParser::HeaderContext* CalculatorParser::SessionContext::header() {
+  return getRuleContext<CalculatorParser::HeaderContext>(0);
 }
 
-calculatorParser::EquationContext* calculatorParser::SessionContext::equation() {
-  return getRuleContext<calculatorParser::EquationContext>(0);
+CalculatorParser::EquationContext* CalculatorParser::SessionContext::equation() {
+  return getRuleContext<CalculatorParser::EquationContext>(0);
 }
 
 
-size_t calculatorParser::SessionContext::getRuleIndex() const {
-  return calculatorParser::RuleSession;
+size_t CalculatorParser::SessionContext::getRuleIndex() const {
+  return CalculatorParser::RuleSession;
 }
 
-void calculatorParser::SessionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::SessionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterSession(this);
 }
 
-void calculatorParser::SessionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::SessionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitSession(this);
 }
 
 
-antlrcpp::Any calculatorParser::SessionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::SessionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitSession(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::SessionContext* calculatorParser::session() {
+CalculatorParser::SessionContext* CalculatorParser::session() {
   SessionContext *_localctx = _tracker.createInstance<SessionContext>(_ctx, getState());
-  enterRule(_localctx, 0, calculatorParser::RuleSession);
+  enterRule(_localctx, 0, CalculatorParser::RuleSession);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -86,18 +86,18 @@ calculatorParser::SessionContext* calculatorParser::session() {
     setState(28);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
-      case calculatorParser::HEADER: {
+      case CalculatorParser::HEADER: {
         enterOuterAlt(_localctx, 1);
         setState(26);
         header();
         break;
       }
 
-      case calculatorParser::COS:
-      case calculatorParser::SIN:
-      case calculatorParser::LPAREN:
-      case calculatorParser::VARIABLE:
-      case calculatorParser::SCIENTIFIC_NUMBER: {
+      case CalculatorParser::COS:
+      case CalculatorParser::SIN:
+      case CalculatorParser::LPAREN:
+      case CalculatorParser::VARIABLE:
+      case CalculatorParser::SCIENTIFIC_NUMBER: {
         enterOuterAlt(_localctx, 2);
         setState(27);
         equation();
@@ -120,42 +120,42 @@ calculatorParser::SessionContext* calculatorParser::session() {
 
 //----------------- HeaderContext ------------------------------------------------------------------
 
-calculatorParser::HeaderContext::HeaderContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::HeaderContext::HeaderContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-tree::TerminalNode* calculatorParser::HeaderContext::HEADER() {
-  return getToken(calculatorParser::HEADER, 0);
+tree::TerminalNode* CalculatorParser::HeaderContext::HEADER() {
+  return getToken(CalculatorParser::HEADER, 0);
 }
 
 
-size_t calculatorParser::HeaderContext::getRuleIndex() const {
-  return calculatorParser::RuleHeader;
+size_t CalculatorParser::HeaderContext::getRuleIndex() const {
+  return CalculatorParser::RuleHeader;
 }
 
-void calculatorParser::HeaderContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::HeaderContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterHeader(this);
 }
 
-void calculatorParser::HeaderContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::HeaderContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitHeader(this);
 }
 
 
-antlrcpp::Any calculatorParser::HeaderContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::HeaderContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitHeader(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::HeaderContext* calculatorParser::header() {
+CalculatorParser::HeaderContext* CalculatorParser::header() {
   HeaderContext *_localctx = _tracker.createInstance<HeaderContext>(_ctx, getState());
-  enterRule(_localctx, 2, calculatorParser::RuleHeader);
+  enterRule(_localctx, 2, CalculatorParser::RuleHeader);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -167,7 +167,7 @@ calculatorParser::HeaderContext* calculatorParser::header() {
   try {
     enterOuterAlt(_localctx, 1);
     setState(30);
-    match(calculatorParser::HEADER);
+    match(CalculatorParser::HEADER);
    
   }
   catch (RecognitionException &e) {
@@ -181,50 +181,50 @@ calculatorParser::HeaderContext* calculatorParser::header() {
 
 //----------------- EquationContext ------------------------------------------------------------------
 
-calculatorParser::EquationContext::EquationContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::EquationContext::EquationContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-calculatorParser::ExpressionContext* calculatorParser::EquationContext::expression() {
-  return getRuleContext<calculatorParser::ExpressionContext>(0);
+CalculatorParser::ExpressionContext* CalculatorParser::EquationContext::expression() {
+  return getRuleContext<CalculatorParser::ExpressionContext>(0);
 }
 
-calculatorParser::VariableContext* calculatorParser::EquationContext::variable() {
-  return getRuleContext<calculatorParser::VariableContext>(0);
+CalculatorParser::VariableContext* CalculatorParser::EquationContext::variable() {
+  return getRuleContext<CalculatorParser::VariableContext>(0);
 }
 
-tree::TerminalNode* calculatorParser::EquationContext::EQ() {
-  return getToken(calculatorParser::EQ, 0);
+tree::TerminalNode* CalculatorParser::EquationContext::EQ() {
+  return getToken(CalculatorParser::EQ, 0);
 }
 
 
-size_t calculatorParser::EquationContext::getRuleIndex() const {
-  return calculatorParser::RuleEquation;
+size_t CalculatorParser::EquationContext::getRuleIndex() const {
+  return CalculatorParser::RuleEquation;
 }
 
-void calculatorParser::EquationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::EquationContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterEquation(this);
 }
 
-void calculatorParser::EquationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::EquationContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitEquation(this);
 }
 
 
-antlrcpp::Any calculatorParser::EquationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::EquationContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitEquation(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::EquationContext* calculatorParser::equation() {
+CalculatorParser::EquationContext* CalculatorParser::equation() {
   EquationContext *_localctx = _tracker.createInstance<EquationContext>(_ctx, getState());
-  enterRule(_localctx, 4, calculatorParser::RuleEquation);
+  enterRule(_localctx, 4, CalculatorParser::RuleEquation);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -240,11 +240,11 @@ calculatorParser::EquationContext* calculatorParser::equation() {
     _errHandler->sync(this);
 
     _la = _input->LA(1);
-    if (_la == calculatorParser::VARIABLE) {
+    if (_la == CalculatorParser::VARIABLE) {
       setState(32);
       variable();
       setState(33);
-      match(calculatorParser::EQ);
+      match(CalculatorParser::EQ);
     }
     setState(37);
     expression();
@@ -261,62 +261,62 @@ calculatorParser::EquationContext* calculatorParser::equation() {
 
 //----------------- ExpressionContext ------------------------------------------------------------------
 
-calculatorParser::ExpressionContext::ExpressionContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::ExpressionContext::ExpressionContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-std::vector<calculatorParser::MultiplyingExpressionContext *> calculatorParser::ExpressionContext::multiplyingExpression() {
-  return getRuleContexts<calculatorParser::MultiplyingExpressionContext>();
+std::vector<CalculatorParser::MultiplyingExpressionContext *> CalculatorParser::ExpressionContext::multiplyingExpression() {
+  return getRuleContexts<CalculatorParser::MultiplyingExpressionContext>();
 }
 
-calculatorParser::MultiplyingExpressionContext* calculatorParser::ExpressionContext::multiplyingExpression(size_t i) {
-  return getRuleContext<calculatorParser::MultiplyingExpressionContext>(i);
+CalculatorParser::MultiplyingExpressionContext* CalculatorParser::ExpressionContext::multiplyingExpression(size_t i) {
+  return getRuleContext<CalculatorParser::MultiplyingExpressionContext>(i);
 }
 
-std::vector<tree::TerminalNode *> calculatorParser::ExpressionContext::PLUS() {
-  return getTokens(calculatorParser::PLUS);
+std::vector<tree::TerminalNode *> CalculatorParser::ExpressionContext::PLUS() {
+  return getTokens(CalculatorParser::PLUS);
 }
 
-tree::TerminalNode* calculatorParser::ExpressionContext::PLUS(size_t i) {
-  return getToken(calculatorParser::PLUS, i);
+tree::TerminalNode* CalculatorParser::ExpressionContext::PLUS(size_t i) {
+  return getToken(CalculatorParser::PLUS, i);
 }
 
-std::vector<tree::TerminalNode *> calculatorParser::ExpressionContext::MINUS() {
-  return getTokens(calculatorParser::MINUS);
+std::vector<tree::TerminalNode *> CalculatorParser::ExpressionContext::MINUS() {
+  return getTokens(CalculatorParser::MINUS);
 }
 
-tree::TerminalNode* calculatorParser::ExpressionContext::MINUS(size_t i) {
-  return getToken(calculatorParser::MINUS, i);
+tree::TerminalNode* CalculatorParser::ExpressionContext::MINUS(size_t i) {
+  return getToken(CalculatorParser::MINUS, i);
 }
 
 
-size_t calculatorParser::ExpressionContext::getRuleIndex() const {
-  return calculatorParser::RuleExpression;
+size_t CalculatorParser::ExpressionContext::getRuleIndex() const {
+  return CalculatorParser::RuleExpression;
 }
 
-void calculatorParser::ExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::ExpressionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterExpression(this);
 }
 
-void calculatorParser::ExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::ExpressionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitExpression(this);
 }
 
 
-antlrcpp::Any calculatorParser::ExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::ExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitExpression(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::ExpressionContext* calculatorParser::expression() {
+CalculatorParser::ExpressionContext* CalculatorParser::expression() {
   ExpressionContext *_localctx = _tracker.createInstance<ExpressionContext>(_ctx, getState());
-  enterRule(_localctx, 6, calculatorParser::RuleExpression);
+  enterRule(_localctx, 6, CalculatorParser::RuleExpression);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -333,14 +333,14 @@ calculatorParser::ExpressionContext* calculatorParser::expression() {
     setState(44);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (_la == calculatorParser::PLUS
+    while (_la == CalculatorParser::PLUS
 
-    || _la == calculatorParser::MINUS) {
+    || _la == CalculatorParser::MINUS) {
       setState(40);
       _la = _input->LA(1);
-      if (!(_la == calculatorParser::PLUS
+      if (!(_la == CalculatorParser::PLUS
 
-      || _la == calculatorParser::MINUS)) {
+      || _la == CalculatorParser::MINUS)) {
       _errHandler->recoverInline(this);
       }
       else {
@@ -366,62 +366,62 @@ calculatorParser::ExpressionContext* calculatorParser::expression() {
 
 //----------------- MultiplyingExpressionContext ------------------------------------------------------------------
 
-calculatorParser::MultiplyingExpressionContext::MultiplyingExpressionContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::MultiplyingExpressionContext::MultiplyingExpressionContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-std::vector<calculatorParser::PowExpressionContext *> calculatorParser::MultiplyingExpressionContext::powExpression() {
-  return getRuleContexts<calculatorParser::PowExpressionContext>();
+std::vector<CalculatorParser::PowExpressionContext *> CalculatorParser::MultiplyingExpressionContext::powExpression() {
+  return getRuleContexts<CalculatorParser::PowExpressionContext>();
 }
 
-calculatorParser::PowExpressionContext* calculatorParser::MultiplyingExpressionContext::powExpression(size_t i) {
-  return getRuleContext<calculatorParser::PowExpressionContext>(i);
+CalculatorParser::PowExpressionContext* CalculatorParser::MultiplyingExpressionContext::powExpression(size_t i) {
+  return getRuleContext<CalculatorParser::PowExpressionContext>(i);
 }
 
-std::vector<tree::TerminalNode *> calculatorParser::MultiplyingExpressionContext::TIMES() {
-  return getTokens(calculatorParser::TIMES);
+std::vector<tree::TerminalNode *> CalculatorParser::MultiplyingExpressionContext::TIMES() {
+  return getTokens(CalculatorParser::TIMES);
 }
 
-tree::TerminalNode* calculatorParser::MultiplyingExpressionContext::TIMES(size_t i) {
-  return getToken(calculatorParser::TIMES, i);
+tree::TerminalNode* CalculatorParser::MultiplyingExpressionContext::TIMES(size_t i) {
+  return getToken(CalculatorParser::TIMES, i);
 }
 
-std::vector<tree::TerminalNode *> calculatorParser::MultiplyingExpressionContext::DIV() {
-  return getTokens(calculatorParser::DIV);
+std::vector<tree::TerminalNode *> CalculatorParser::MultiplyingExpressionContext::DIV() {
+  return getTokens(CalculatorParser::DIV);
 }
 
-tree::TerminalNode* calculatorParser::MultiplyingExpressionContext::DIV(size_t i) {
-  return getToken(calculatorParser::DIV, i);
+tree::TerminalNode* CalculatorParser::MultiplyingExpressionContext::DIV(size_t i) {
+  return getToken(CalculatorParser::DIV, i);
 }
 
 
-size_t calculatorParser::MultiplyingExpressionContext::getRuleIndex() const {
-  return calculatorParser::RuleMultiplyingExpression;
+size_t CalculatorParser::MultiplyingExpressionContext::getRuleIndex() const {
+  return CalculatorParser::RuleMultiplyingExpression;
 }
 
-void calculatorParser::MultiplyingExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::MultiplyingExpressionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterMultiplyingExpression(this);
 }
 
-void calculatorParser::MultiplyingExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::MultiplyingExpressionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitMultiplyingExpression(this);
 }
 
 
-antlrcpp::Any calculatorParser::MultiplyingExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::MultiplyingExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitMultiplyingExpression(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::MultiplyingExpressionContext* calculatorParser::multiplyingExpression() {
+CalculatorParser::MultiplyingExpressionContext* CalculatorParser::multiplyingExpression() {
   MultiplyingExpressionContext *_localctx = _tracker.createInstance<MultiplyingExpressionContext>(_ctx, getState());
-  enterRule(_localctx, 8, calculatorParser::RuleMultiplyingExpression);
+  enterRule(_localctx, 8, CalculatorParser::RuleMultiplyingExpression);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -438,14 +438,14 @@ calculatorParser::MultiplyingExpressionContext* calculatorParser::multiplyingExp
     setState(52);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (_la == calculatorParser::TIMES
+    while (_la == CalculatorParser::TIMES
 
-    || _la == calculatorParser::DIV) {
+    || _la == CalculatorParser::DIV) {
       setState(48);
       _la = _input->LA(1);
-      if (!(_la == calculatorParser::TIMES
+      if (!(_la == CalculatorParser::TIMES
 
-      || _la == calculatorParser::DIV)) {
+      || _la == CalculatorParser::DIV)) {
       _errHandler->recoverInline(this);
       }
       else {
@@ -471,54 +471,54 @@ calculatorParser::MultiplyingExpressionContext* calculatorParser::multiplyingExp
 
 //----------------- PowExpressionContext ------------------------------------------------------------------
 
-calculatorParser::PowExpressionContext::PowExpressionContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::PowExpressionContext::PowExpressionContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-std::vector<calculatorParser::SignedAtomContext *> calculatorParser::PowExpressionContext::signedAtom() {
-  return getRuleContexts<calculatorParser::SignedAtomContext>();
+std::vector<CalculatorParser::SignedAtomContext *> CalculatorParser::PowExpressionContext::signedAtom() {
+  return getRuleContexts<CalculatorParser::SignedAtomContext>();
 }
 
-calculatorParser::SignedAtomContext* calculatorParser::PowExpressionContext::signedAtom(size_t i) {
-  return getRuleContext<calculatorParser::SignedAtomContext>(i);
+CalculatorParser::SignedAtomContext* CalculatorParser::PowExpressionContext::signedAtom(size_t i) {
+  return getRuleContext<CalculatorParser::SignedAtomContext>(i);
 }
 
-std::vector<tree::TerminalNode *> calculatorParser::PowExpressionContext::POW() {
-  return getTokens(calculatorParser::POW);
+std::vector<tree::TerminalNode *> CalculatorParser::PowExpressionContext::POW() {
+  return getTokens(CalculatorParser::POW);
 }
 
-tree::TerminalNode* calculatorParser::PowExpressionContext::POW(size_t i) {
-  return getToken(calculatorParser::POW, i);
+tree::TerminalNode* CalculatorParser::PowExpressionContext::POW(size_t i) {
+  return getToken(CalculatorParser::POW, i);
 }
 
 
-size_t calculatorParser::PowExpressionContext::getRuleIndex() const {
-  return calculatorParser::RulePowExpression;
+size_t CalculatorParser::PowExpressionContext::getRuleIndex() const {
+  return CalculatorParser::RulePowExpression;
 }
 
-void calculatorParser::PowExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::PowExpressionContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterPowExpression(this);
 }
 
-void calculatorParser::PowExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::PowExpressionContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitPowExpression(this);
 }
 
 
-antlrcpp::Any calculatorParser::PowExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::PowExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitPowExpression(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::PowExpressionContext* calculatorParser::powExpression() {
+CalculatorParser::PowExpressionContext* CalculatorParser::powExpression() {
   PowExpressionContext *_localctx = _tracker.createInstance<PowExpressionContext>(_ctx, getState());
-  enterRule(_localctx, 10, calculatorParser::RulePowExpression);
+  enterRule(_localctx, 10, CalculatorParser::RulePowExpression);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -535,9 +535,9 @@ calculatorParser::PowExpressionContext* calculatorParser::powExpression() {
     setState(60);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (_la == calculatorParser::POW) {
+    while (_la == CalculatorParser::POW) {
       setState(56);
-      match(calculatorParser::POW);
+      match(CalculatorParser::POW);
       setState(57);
       signedAtom();
       setState(62);
@@ -557,46 +557,46 @@ calculatorParser::PowExpressionContext* calculatorParser::powExpression() {
 
 //----------------- SignedAtomContext ------------------------------------------------------------------
 
-calculatorParser::SignedAtomContext::SignedAtomContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::SignedAtomContext::SignedAtomContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-calculatorParser::Func_Context* calculatorParser::SignedAtomContext::func_() {
-  return getRuleContext<calculatorParser::Func_Context>(0);
+CalculatorParser::Func_Context* CalculatorParser::SignedAtomContext::func_() {
+  return getRuleContext<CalculatorParser::Func_Context>(0);
 }
 
-calculatorParser::AtomContext* calculatorParser::SignedAtomContext::atom() {
-  return getRuleContext<calculatorParser::AtomContext>(0);
+CalculatorParser::AtomContext* CalculatorParser::SignedAtomContext::atom() {
+  return getRuleContext<CalculatorParser::AtomContext>(0);
 }
 
 
-size_t calculatorParser::SignedAtomContext::getRuleIndex() const {
-  return calculatorParser::RuleSignedAtom;
+size_t CalculatorParser::SignedAtomContext::getRuleIndex() const {
+  return CalculatorParser::RuleSignedAtom;
 }
 
-void calculatorParser::SignedAtomContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::SignedAtomContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterSignedAtom(this);
 }
 
-void calculatorParser::SignedAtomContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::SignedAtomContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitSignedAtom(this);
 }
 
 
-antlrcpp::Any calculatorParser::SignedAtomContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::SignedAtomContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitSignedAtom(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::SignedAtomContext* calculatorParser::signedAtom() {
+CalculatorParser::SignedAtomContext* CalculatorParser::signedAtom() {
   SignedAtomContext *_localctx = _tracker.createInstance<SignedAtomContext>(_ctx, getState());
-  enterRule(_localctx, 12, calculatorParser::RuleSignedAtom);
+  enterRule(_localctx, 12, CalculatorParser::RuleSignedAtom);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -609,16 +609,16 @@ calculatorParser::SignedAtomContext* calculatorParser::signedAtom() {
     setState(65);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
-      case calculatorParser::COS:
-      case calculatorParser::SIN: {
+      case CalculatorParser::COS:
+      case CalculatorParser::SIN: {
         enterOuterAlt(_localctx, 1);
         setState(63);
         func_();
         break;
       }
 
-      case calculatorParser::LPAREN:
-      case calculatorParser::SCIENTIFIC_NUMBER: {
+      case CalculatorParser::LPAREN:
+      case CalculatorParser::SCIENTIFIC_NUMBER: {
         enterOuterAlt(_localctx, 2);
         setState(64);
         atom();
@@ -641,46 +641,46 @@ calculatorParser::SignedAtomContext* calculatorParser::signedAtom() {
 
 //----------------- AtomContext ------------------------------------------------------------------
 
-calculatorParser::AtomContext::AtomContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::AtomContext::AtomContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-calculatorParser::ScientificContext* calculatorParser::AtomContext::scientific() {
-  return getRuleContext<calculatorParser::ScientificContext>(0);
+CalculatorParser::ScientificContext* CalculatorParser::AtomContext::scientific() {
+  return getRuleContext<CalculatorParser::ScientificContext>(0);
 }
 
-calculatorParser::ParenticesContext* calculatorParser::AtomContext::parentices() {
-  return getRuleContext<calculatorParser::ParenticesContext>(0);
+CalculatorParser::ParenticesContext* CalculatorParser::AtomContext::parentices() {
+  return getRuleContext<CalculatorParser::ParenticesContext>(0);
 }
 
 
-size_t calculatorParser::AtomContext::getRuleIndex() const {
-  return calculatorParser::RuleAtom;
+size_t CalculatorParser::AtomContext::getRuleIndex() const {
+  return CalculatorParser::RuleAtom;
 }
 
-void calculatorParser::AtomContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::AtomContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterAtom(this);
 }
 
-void calculatorParser::AtomContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::AtomContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitAtom(this);
 }
 
 
-antlrcpp::Any calculatorParser::AtomContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::AtomContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitAtom(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::AtomContext* calculatorParser::atom() {
+CalculatorParser::AtomContext* CalculatorParser::atom() {
   AtomContext *_localctx = _tracker.createInstance<AtomContext>(_ctx, getState());
-  enterRule(_localctx, 14, calculatorParser::RuleAtom);
+  enterRule(_localctx, 14, CalculatorParser::RuleAtom);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -693,14 +693,14 @@ calculatorParser::AtomContext* calculatorParser::atom() {
     setState(69);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
-      case calculatorParser::SCIENTIFIC_NUMBER: {
+      case CalculatorParser::SCIENTIFIC_NUMBER: {
         enterOuterAlt(_localctx, 1);
         setState(67);
         scientific();
         break;
       }
 
-      case calculatorParser::LPAREN: {
+      case CalculatorParser::LPAREN: {
         enterOuterAlt(_localctx, 2);
         setState(68);
         parentices();
@@ -723,42 +723,42 @@ calculatorParser::AtomContext* calculatorParser::atom() {
 
 //----------------- VariableContext ------------------------------------------------------------------
 
-calculatorParser::VariableContext::VariableContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::VariableContext::VariableContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-tree::TerminalNode* calculatorParser::VariableContext::VARIABLE() {
-  return getToken(calculatorParser::VARIABLE, 0);
+tree::TerminalNode* CalculatorParser::VariableContext::VARIABLE() {
+  return getToken(CalculatorParser::VARIABLE, 0);
 }
 
 
-size_t calculatorParser::VariableContext::getRuleIndex() const {
-  return calculatorParser::RuleVariable;
+size_t CalculatorParser::VariableContext::getRuleIndex() const {
+  return CalculatorParser::RuleVariable;
 }
 
-void calculatorParser::VariableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::VariableContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterVariable(this);
 }
 
-void calculatorParser::VariableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::VariableContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitVariable(this);
 }
 
 
-antlrcpp::Any calculatorParser::VariableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::VariableContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitVariable(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::VariableContext* calculatorParser::variable() {
+CalculatorParser::VariableContext* CalculatorParser::variable() {
   VariableContext *_localctx = _tracker.createInstance<VariableContext>(_ctx, getState());
-  enterRule(_localctx, 16, calculatorParser::RuleVariable);
+  enterRule(_localctx, 16, CalculatorParser::RuleVariable);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -770,7 +770,7 @@ calculatorParser::VariableContext* calculatorParser::variable() {
   try {
     enterOuterAlt(_localctx, 1);
     setState(71);
-    match(calculatorParser::VARIABLE);
+    match(CalculatorParser::VARIABLE);
    
   }
   catch (RecognitionException &e) {
@@ -784,42 +784,42 @@ calculatorParser::VariableContext* calculatorParser::variable() {
 
 //----------------- ScientificContext ------------------------------------------------------------------
 
-calculatorParser::ScientificContext::ScientificContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::ScientificContext::ScientificContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-tree::TerminalNode* calculatorParser::ScientificContext::SCIENTIFIC_NUMBER() {
-  return getToken(calculatorParser::SCIENTIFIC_NUMBER, 0);
+tree::TerminalNode* CalculatorParser::ScientificContext::SCIENTIFIC_NUMBER() {
+  return getToken(CalculatorParser::SCIENTIFIC_NUMBER, 0);
 }
 
 
-size_t calculatorParser::ScientificContext::getRuleIndex() const {
-  return calculatorParser::RuleScientific;
+size_t CalculatorParser::ScientificContext::getRuleIndex() const {
+  return CalculatorParser::RuleScientific;
 }
 
-void calculatorParser::ScientificContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::ScientificContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterScientific(this);
 }
 
-void calculatorParser::ScientificContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::ScientificContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitScientific(this);
 }
 
 
-antlrcpp::Any calculatorParser::ScientificContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::ScientificContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitScientific(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::ScientificContext* calculatorParser::scientific() {
+CalculatorParser::ScientificContext* CalculatorParser::scientific() {
   ScientificContext *_localctx = _tracker.createInstance<ScientificContext>(_ctx, getState());
-  enterRule(_localctx, 18, calculatorParser::RuleScientific);
+  enterRule(_localctx, 18, CalculatorParser::RuleScientific);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -831,7 +831,7 @@ calculatorParser::ScientificContext* calculatorParser::scientific() {
   try {
     enterOuterAlt(_localctx, 1);
     setState(73);
-    match(calculatorParser::SCIENTIFIC_NUMBER);
+    match(CalculatorParser::SCIENTIFIC_NUMBER);
    
   }
   catch (RecognitionException &e) {
@@ -845,50 +845,50 @@ calculatorParser::ScientificContext* calculatorParser::scientific() {
 
 //----------------- ParenticesContext ------------------------------------------------------------------
 
-calculatorParser::ParenticesContext::ParenticesContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::ParenticesContext::ParenticesContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-tree::TerminalNode* calculatorParser::ParenticesContext::LPAREN() {
-  return getToken(calculatorParser::LPAREN, 0);
+tree::TerminalNode* CalculatorParser::ParenticesContext::LPAREN() {
+  return getToken(CalculatorParser::LPAREN, 0);
 }
 
-calculatorParser::ExpressionContext* calculatorParser::ParenticesContext::expression() {
-  return getRuleContext<calculatorParser::ExpressionContext>(0);
+CalculatorParser::ExpressionContext* CalculatorParser::ParenticesContext::expression() {
+  return getRuleContext<CalculatorParser::ExpressionContext>(0);
 }
 
-tree::TerminalNode* calculatorParser::ParenticesContext::RPAREN() {
-  return getToken(calculatorParser::RPAREN, 0);
+tree::TerminalNode* CalculatorParser::ParenticesContext::RPAREN() {
+  return getToken(CalculatorParser::RPAREN, 0);
 }
 
 
-size_t calculatorParser::ParenticesContext::getRuleIndex() const {
-  return calculatorParser::RuleParentices;
+size_t CalculatorParser::ParenticesContext::getRuleIndex() const {
+  return CalculatorParser::RuleParentices;
 }
 
-void calculatorParser::ParenticesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::ParenticesContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterParentices(this);
 }
 
-void calculatorParser::ParenticesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::ParenticesContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitParentices(this);
 }
 
 
-antlrcpp::Any calculatorParser::ParenticesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::ParenticesContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitParentices(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::ParenticesContext* calculatorParser::parentices() {
+CalculatorParser::ParenticesContext* CalculatorParser::parentices() {
   ParenticesContext *_localctx = _tracker.createInstance<ParenticesContext>(_ctx, getState());
-  enterRule(_localctx, 20, calculatorParser::RuleParentices);
+  enterRule(_localctx, 20, CalculatorParser::RuleParentices);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -900,11 +900,11 @@ calculatorParser::ParenticesContext* calculatorParser::parentices() {
   try {
     enterOuterAlt(_localctx, 1);
     setState(75);
-    match(calculatorParser::LPAREN);
+    match(CalculatorParser::LPAREN);
     setState(76);
     expression();
     setState(77);
-    match(calculatorParser::RPAREN);
+    match(CalculatorParser::RPAREN);
    
   }
   catch (RecognitionException &e) {
@@ -918,46 +918,46 @@ calculatorParser::ParenticesContext* calculatorParser::parentices() {
 
 //----------------- Func_Context ------------------------------------------------------------------
 
-calculatorParser::Func_Context::Func_Context(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::Func_Context::Func_Context(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-calculatorParser::FuncnameContext* calculatorParser::Func_Context::funcname() {
-  return getRuleContext<calculatorParser::FuncnameContext>(0);
+CalculatorParser::FuncnameContext* CalculatorParser::Func_Context::funcname() {
+  return getRuleContext<CalculatorParser::FuncnameContext>(0);
 }
 
-calculatorParser::ParenticesContext* calculatorParser::Func_Context::parentices() {
-  return getRuleContext<calculatorParser::ParenticesContext>(0);
+CalculatorParser::ParenticesContext* CalculatorParser::Func_Context::parentices() {
+  return getRuleContext<CalculatorParser::ParenticesContext>(0);
 }
 
 
-size_t calculatorParser::Func_Context::getRuleIndex() const {
-  return calculatorParser::RuleFunc_;
+size_t CalculatorParser::Func_Context::getRuleIndex() const {
+  return CalculatorParser::RuleFunc_;
 }
 
-void calculatorParser::Func_Context::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::Func_Context::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterFunc_(this);
 }
 
-void calculatorParser::Func_Context::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::Func_Context::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFunc_(this);
 }
 
 
-antlrcpp::Any calculatorParser::Func_Context::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::Func_Context::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitFunc_(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::Func_Context* calculatorParser::func_() {
+CalculatorParser::Func_Context* CalculatorParser::func_() {
   Func_Context *_localctx = _tracker.createInstance<Func_Context>(_ctx, getState());
-  enterRule(_localctx, 22, calculatorParser::RuleFunc_);
+  enterRule(_localctx, 22, CalculatorParser::RuleFunc_);
 
 #if __cplusplus > 201703L
   auto onExit = finally([=, this] {
@@ -985,46 +985,46 @@ calculatorParser::Func_Context* calculatorParser::func_() {
 
 //----------------- FuncnameContext ------------------------------------------------------------------
 
-calculatorParser::FuncnameContext::FuncnameContext(ParserRuleContext *parent, size_t invokingState)
+CalculatorParser::FuncnameContext::FuncnameContext(ParserRuleContext *parent, size_t invokingState)
   : ParserRuleContext(parent, invokingState) {
 }
 
-tree::TerminalNode* calculatorParser::FuncnameContext::COS() {
-  return getToken(calculatorParser::COS, 0);
+tree::TerminalNode* CalculatorParser::FuncnameContext::COS() {
+  return getToken(CalculatorParser::COS, 0);
 }
 
-tree::TerminalNode* calculatorParser::FuncnameContext::SIN() {
-  return getToken(calculatorParser::SIN, 0);
+tree::TerminalNode* CalculatorParser::FuncnameContext::SIN() {
+  return getToken(CalculatorParser::SIN, 0);
 }
 
 
-size_t calculatorParser::FuncnameContext::getRuleIndex() const {
-  return calculatorParser::RuleFuncname;
+size_t CalculatorParser::FuncnameContext::getRuleIndex() const {
+  return CalculatorParser::RuleFuncname;
 }
 
-void calculatorParser::FuncnameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::FuncnameContext::enterRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->enterFuncname(this);
 }
 
-void calculatorParser::FuncnameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<calculatorListener *>(listener);
+void CalculatorParser::FuncnameContext::exitRule(tree::ParseTreeListener *listener) {
+  auto parserListener = dynamic_cast<CalculatorListener *>(listener);
   if (parserListener != nullptr)
     parserListener->exitFuncname(this);
 }
 
 
-antlrcpp::Any calculatorParser::FuncnameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<calculatorVisitor*>(visitor))
+antlrcpp::Any CalculatorParser::FuncnameContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<CalculatorVisitor*>(visitor))
     return parserVisitor->visitFuncname(this);
   else
     return visitor->visitChildren(this);
 }
 
-calculatorParser::FuncnameContext* calculatorParser::funcname() {
+CalculatorParser::FuncnameContext* CalculatorParser::funcname() {
   FuncnameContext *_localctx = _tracker.createInstance<FuncnameContext>(_ctx, getState());
-  enterRule(_localctx, 24, calculatorParser::RuleFuncname);
+  enterRule(_localctx, 24, CalculatorParser::RuleFuncname);
   size_t _la = 0;
 
 #if __cplusplus > 201703L
@@ -1038,9 +1038,9 @@ calculatorParser::FuncnameContext* calculatorParser::funcname() {
     enterOuterAlt(_localctx, 1);
     setState(82);
     _la = _input->LA(1);
-    if (!(_la == calculatorParser::COS
+    if (!(_la == CalculatorParser::COS
 
-    || _la == calculatorParser::SIN)) {
+    || _la == CalculatorParser::SIN)) {
     _errHandler->recoverInline(this);
     }
     else {
@@ -1059,34 +1059,34 @@ calculatorParser::FuncnameContext* calculatorParser::funcname() {
 }
 
 // Static vars and initialization.
-std::vector<dfa::DFA> calculatorParser::_decisionToDFA;
-atn::PredictionContextCache calculatorParser::_sharedContextCache;
+std::vector<dfa::DFA> CalculatorParser::_decisionToDFA;
+atn::PredictionContextCache CalculatorParser::_sharedContextCache;
 
 // We own the ATN which in turn owns the ATN states.
-atn::ATN calculatorParser::_atn;
-std::vector<uint16_t> calculatorParser::_serializedATN;
+atn::ATN CalculatorParser::_atn;
+std::vector<uint16_t> CalculatorParser::_serializedATN;
 
-std::vector<std::string> calculatorParser::_ruleNames = {
+std::vector<std::string> CalculatorParser::_ruleNames = {
   "session", "header", "equation", "expression", "multiplyingExpression", 
   "powExpression", "signedAtom", "atom", "variable", "scientific", "parentices", 
   "func_", "funcname"
 };
 
-std::vector<std::string> calculatorParser::_literalNames = {
+std::vector<std::string> CalculatorParser::_literalNames = {
   "", "'----'", "'='", "'cos'", "'sin'", "'('", "')'", "'+'", "'-'", "'*'", 
   "'/'", "'^'"
 };
 
-std::vector<std::string> calculatorParser::_symbolicNames = {
+std::vector<std::string> CalculatorParser::_symbolicNames = {
   "", "HEADER", "EQ", "COS", "SIN", "LPAREN", "RPAREN", "PLUS", "MINUS", 
   "TIMES", "DIV", "POW", "VARIABLE", "SCIENTIFIC_NUMBER", "WS"
 };
 
-dfa::Vocabulary calculatorParser::_vocabulary(_literalNames, _symbolicNames);
+dfa::Vocabulary CalculatorParser::_vocabulary(_literalNames, _symbolicNames);
 
-std::vector<std::string> calculatorParser::_tokenNames;
+std::vector<std::string> CalculatorParser::_tokenNames;
 
-calculatorParser::Initializer::Initializer() {
+CalculatorParser::Initializer::Initializer() {
 	for (size_t i = 0; i < _symbolicNames.size(); ++i) {
 		std::string name = _vocabulary.getLiteralName(i);
 		if (name.empty()) {
@@ -1166,4 +1166,4 @@ calculatorParser::Initializer::Initializer() {
   }
 }
 
-calculatorParser::Initializer calculatorParser::_init;
+CalculatorParser::Initializer CalculatorParser::_init;

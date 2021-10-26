@@ -1,50 +1,50 @@
 
-// Generated from /home/leber/CLionProjects/cpp_calculator_project/calculator.g4 by ANTLR 4.9.1
+// Generated from /home/leber/CLionProjects/cpp_calculator_project/Calculator.g4 by ANTLR 4.9.1
 
 
-#include "calculatorLexer.h"
+#include "CalculatorLexer.h"
 
 
 using namespace antlr4;
 
 
-calculatorLexer::calculatorLexer(CharStream *input) : Lexer(input) {
+CalculatorLexer::CalculatorLexer(CharStream *input) : Lexer(input) {
   _interpreter = new atn::LexerATNSimulator(this, _atn, _decisionToDFA, _sharedContextCache);
 }
 
-calculatorLexer::~calculatorLexer() {
+CalculatorLexer::~CalculatorLexer() {
   delete _interpreter;
 }
 
-std::string calculatorLexer::getGrammarFileName() const {
-  return "calculator.g4";
+std::string CalculatorLexer::getGrammarFileName() const {
+  return "Calculator.g4";
 }
 
-const std::vector<std::string>& calculatorLexer::getRuleNames() const {
+const std::vector<std::string>& CalculatorLexer::getRuleNames() const {
   return _ruleNames;
 }
 
-const std::vector<std::string>& calculatorLexer::getChannelNames() const {
+const std::vector<std::string>& CalculatorLexer::getChannelNames() const {
   return _channelNames;
 }
 
-const std::vector<std::string>& calculatorLexer::getModeNames() const {
+const std::vector<std::string>& CalculatorLexer::getModeNames() const {
   return _modeNames;
 }
 
-const std::vector<std::string>& calculatorLexer::getTokenNames() const {
+const std::vector<std::string>& CalculatorLexer::getTokenNames() const {
   return _tokenNames;
 }
 
-dfa::Vocabulary& calculatorLexer::getVocabulary() const {
+dfa::Vocabulary& CalculatorLexer::getVocabulary() const {
   return _vocabulary;
 }
 
-const std::vector<uint16_t> calculatorLexer::getSerializedATN() const {
+const std::vector<uint16_t> CalculatorLexer::getSerializedATN() const {
   return _serializedATN;
 }
 
-const atn::ATN& calculatorLexer::getATN() const {
+const atn::ATN& CalculatorLexer::getATN() const {
   return _atn;
 }
 
@@ -52,42 +52,42 @@ const atn::ATN& calculatorLexer::getATN() const {
 
 
 // Static vars and initialization.
-std::vector<dfa::DFA> calculatorLexer::_decisionToDFA;
-atn::PredictionContextCache calculatorLexer::_sharedContextCache;
+std::vector<dfa::DFA> CalculatorLexer::_decisionToDFA;
+atn::PredictionContextCache CalculatorLexer::_sharedContextCache;
 
 // We own the ATN which in turn owns the ATN states.
-atn::ATN calculatorLexer::_atn;
-std::vector<uint16_t> calculatorLexer::_serializedATN;
+atn::ATN CalculatorLexer::_atn;
+std::vector<uint16_t> CalculatorLexer::_serializedATN;
 
-std::vector<std::string> calculatorLexer::_ruleNames = {
+std::vector<std::string> CalculatorLexer::_ruleNames = {
   "HEADER", "EQ", "COS", "SIN", "LPAREN", "RPAREN", "PLUS", "MINUS", "TIMES", 
   "DIV", "POW", "VARIABLE", "VALID_ID_CHAR", "SCIENTIFIC_NUMBER", "NUMBER", 
   "HEXADECIMAL_NUMBER", "BINARY_NUMBER", "WS"
 };
 
-std::vector<std::string> calculatorLexer::_channelNames = {
+std::vector<std::string> CalculatorLexer::_channelNames = {
   "DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 };
 
-std::vector<std::string> calculatorLexer::_modeNames = {
+std::vector<std::string> CalculatorLexer::_modeNames = {
   "DEFAULT_MODE"
 };
 
-std::vector<std::string> calculatorLexer::_literalNames = {
+std::vector<std::string> CalculatorLexer::_literalNames = {
   "", "'----'", "'='", "'cos'", "'sin'", "'('", "')'", "'+'", "'-'", "'*'", 
   "'/'", "'^'"
 };
 
-std::vector<std::string> calculatorLexer::_symbolicNames = {
+std::vector<std::string> CalculatorLexer::_symbolicNames = {
   "", "HEADER", "EQ", "COS", "SIN", "LPAREN", "RPAREN", "PLUS", "MINUS", 
   "TIMES", "DIV", "POW", "VARIABLE", "SCIENTIFIC_NUMBER", "WS"
 };
 
-dfa::Vocabulary calculatorLexer::_vocabulary(_literalNames, _symbolicNames);
+dfa::Vocabulary CalculatorLexer::_vocabulary(_literalNames, _symbolicNames);
 
-std::vector<std::string> calculatorLexer::_tokenNames;
+std::vector<std::string> CalculatorLexer::_tokenNames;
 
-calculatorLexer::Initializer::Initializer() {
+CalculatorLexer::Initializer::Initializer() {
   // This code could be in a static initializer lambda, but VS doesn't allow access to private class members from there.
 	for (size_t i = 0; i < _symbolicNames.size(); ++i) {
 		std::string name = _vocabulary.getLiteralName(i);
@@ -195,4 +195,4 @@ calculatorLexer::Initializer::Initializer() {
   }
 }
 
-calculatorLexer::Initializer calculatorLexer::_init;
+CalculatorLexer::Initializer CalculatorLexer::_init;

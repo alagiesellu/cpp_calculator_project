@@ -1,5 +1,5 @@
 
-// Generated from /home/leber/CLionProjects/cpp_calculator_project/calculator.g4 by ANTLR 4.9.1
+// Generated from /home/leber/CLionProjects/cpp_calculator_project/Calculator.g4 by ANTLR 4.9.1
 
 #pragma once
 
@@ -9,7 +9,7 @@
 
 
 
-class  calculatorLexer : public antlr4::Lexer {
+class  CalculatorLexer : public antlr4::Lexer {
 public:
   enum {
     HEADER = 1, EQ = 2, COS = 3, SIN = 4, LPAREN = 5, RPAREN = 6, PLUS = 7, 
@@ -17,8 +17,8 @@ public:
     WS = 14
   };
 
-  explicit calculatorLexer(antlr4::CharStream *input);
-  ~calculatorLexer();
+  explicit CalculatorLexer(antlr4::CharStream *input);
+  ~CalculatorLexer();
 
   virtual std::string getGrammarFileName() const override;
   virtual const std::vector<std::string>& getRuleNames() const override;
