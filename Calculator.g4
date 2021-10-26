@@ -31,14 +31,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #####################################################################################
 
 Reference:
-    https://github.com/antlr/grammars-v4/blob/master/calculator/calculator.g4
+    https://github.com/antlr/grammars-v4/blob/master/calculator/Calculator.g4
 
 Grammar copied from the above mentioned reference.
 But modified to project specification.
 
 */
 
-grammar calculator;
+grammar Calculator;
 
 session
     : header
