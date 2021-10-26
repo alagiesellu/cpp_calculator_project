@@ -7,7 +7,6 @@ using namespace std;
 
 void engine(string &inputString) {
 
-
     // Provide the input text in a stream
     antlr4::ANTLRInputStream input(inputString);
 
