@@ -1,7 +1,7 @@
 #include <iostream>
+#include "antlr4-runtime.h"
 #include "CalculatorLexer.h"
 #include "CalculatorParser.h"
-#include "antlr4-runtime.h"
 
 using namespace std;
 
